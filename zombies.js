@@ -99,7 +99,6 @@ class Food extends Item {
  */
 
 class Player {
-  // constructor(name){
   constructor(name, health, strength, speed){
     this.name = name;
     this.health = health;
@@ -116,6 +115,21 @@ class Player {
   getMaxHealth(){
     return this.maxHealth;
   }
+
+  checkPack(){
+    console.log(this.pack);
+    }
+
+  takeItem(item){
+    if (this.pack.length < 3){
+      this.pack.push(item);
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
 }
 
 /**
@@ -129,6 +143,8 @@ class Player {
  *
  * @name checkPack
  */
+
+
 
 
 /**
