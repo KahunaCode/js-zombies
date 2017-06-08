@@ -68,6 +68,12 @@ class Weapon extends Item {
  * -----------------------------
  */
 
+class Food extends Item {
+  constructor(name, energy){
+    super(name);
+    this.enery = energy;
+  }
+}
 
 
 /**
@@ -92,6 +98,25 @@ class Weapon extends Item {
  * @property {method} getMaxHealth         Returns private variable `maxHealth`.
  */
 
+class Player {
+  // constructor(name){
+  constructor(name, health, strength, speed){
+    this.name = name;
+    this.health = health;
+    this.strength = strength;
+    this.speed = speed;
+    this.pack = undefined;
+    this.maxHealth = undefined;
+    this.isAlive = true;
+    this.equipped = false;
+  }
+  getPack(){
+    return this.pack;
+  }
+  getMaxHealth(){
+    return this.maxHealth;
+  }
+}
 
 /**
  * Player Class Method => checkPack()
@@ -238,9 +263,9 @@ class Weapon extends Item {
  * @property {boolean} isAlive      Default value should be `true`.
  */
 
- function Player(){
-  this._maxHealth //put underscore there for a private variable
- }
+ // function Player(){HCPOS
+ //  this._maxHealth //put underscore there for a private variable
+ // }
 
 
 /**
