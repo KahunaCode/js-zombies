@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 /**
  * Class => Item(name)
  * -----------------------------
@@ -8,6 +10,11 @@
  * @property {string} name
  */
 
+class Item {
+  constructor(name){
+    this.name = name;
+  }
+}
 
 /**
  * Class => Weapon(name, damage)
@@ -224,6 +231,10 @@
  * @property {number} speed
  * @property {boolean} isAlive      Default value should be `true`.
  */
+
+ function Player(){
+  this._maxHealth //put underscore there for a private variable
+ }
 
 
 /**
