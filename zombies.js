@@ -132,8 +132,8 @@ class Player {
   }
 
   discardItem(item){
-    if (this._pack.indexOf(item)){
-      this._pack.splice(this._pack.indexOf);
+    if (this.getPack().indexOf(item)){
+      this.getPack().splice(this.getPack().indexOf);
     }
   }
 
