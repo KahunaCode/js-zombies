@@ -71,7 +71,7 @@ class Weapon extends Item {
 class Food extends Item {
   constructor(name, energy){
     super(name);
-    this.enery = energy;
+    this.energy = energy;
   }
 }
 
@@ -104,16 +104,16 @@ class Player {
     this.health = health;
     this.strength = strength;
     this.speed = speed;
-    this.pack = undefined;
-    this.maxHealth = undefined;
+    this._pack = [];
+    this._maxHealth = health;
     this.isAlive = true;
     this.equipped = false;
   }
   getPack(){
-    return this.pack;
+    return this._pack;
   }
   getMaxHealth(){
-    return this.maxHealth;
+    return this._maxHealth;
   }
 
   checkPack(){
@@ -130,6 +130,15 @@ class Player {
     }
   }
 
+  discardItem(item){
+    if (this.pack.indexOf(item)){
+      this.pack.splice(this.pack.indexOf);
+    }
+  }
+
+  equip(itemToEquip){
+
+  }
 }
 
 /**
@@ -191,6 +200,8 @@ class Player {
  * @param {Item/Weapon/Food} item   The item to discard.
  * @return {boolean} true/false     Whether player was able to remove item from pack.
  */
+
+
 
 
 /**
