@@ -117,12 +117,13 @@ class Player {
   }
 
   checkPack(){
-    console.log(this.pack);
+    console.log(this._pack);
     }
 
   takeItem(item){
-    if (this.pack.length < 3){
-      this.pack.push(item);
+    if (this.getPack().length < 3){
+      console.log("packlength " +this.getPack().length);
+      this.getPack().push(item);
       return true;
     }
     else {
@@ -131,8 +132,8 @@ class Player {
   }
 
   discardItem(item){
-    if (this.pack.indexOf(item)){
-      this.pack.splice(this.pack.indexOf);
+    if (this._pack.indexOf(item)){
+      this._pack.splice(this._pack.indexOf);
     }
   }
 
